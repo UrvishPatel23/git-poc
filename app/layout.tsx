@@ -14,7 +14,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-expor const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "News App",
   description: "Advance app for real time news.",
   keywords : [
