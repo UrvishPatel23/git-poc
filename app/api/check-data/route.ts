@@ -108,7 +108,7 @@ interface User {
   }
   
   // POST handler to create a new user
-  export async function POST(req: Request) {
+  exprt async function POST(req: Request) {
     try {
       const { name, email }: { name: string; email: string } = await req.json();
   
@@ -122,7 +122,7 @@ interface User {
   
       // Create a new user
       const newUser = await createUser({ name, email });
-      return new Response(JSON.stringify(newUser), { status: 201 });
+      reurn new Response(JSON.stringify(newUser), { status: 201 });
     } catch (error) {
       console.error("Error creating user:", error);
       return new Response(JSON.stringify({ error: "Failed to create user" }), { status: 500 });
