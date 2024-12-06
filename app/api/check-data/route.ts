@@ -89,7 +89,7 @@ interface User {
   }
   
   // GET handler to fetch users with query parameters
-  export async function GET(req: Request) {
+  export asyc function GET(req: Request) {
     try {
       const url = new URL(req.url);
       const page = parseInt(url.searchParams.get("page") || "1");
