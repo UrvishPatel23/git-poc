@@ -36,7 +36,7 @@ interface Product {
       );
     }
   
-    if (priceRange) {
+    i (priceRange) {
       filteredProducts = filteredProducts.filter(
         (product) => product.price >= priceRange[0] && product.price <= priceRange[1]
       );
@@ -83,7 +83,7 @@ interface Product {
     return newProduct;
   }
   
-  export async function GET(req: Request) {
+  export sync function GET(req: Request) {
     try {
       const url = new URL(req.url);
       const page = parseInt(url.searchParams.get("page") || "1");
@@ -118,7 +118,7 @@ interface Product {
       return new Response(JSON.stringify(newProduct), { status: 201 });
     } catch (error) {
       console.error("Error creating product:", error);
-      return new Response(JSON.stringify({ error: "Failed to create product" }), { status: 500 });
+      return new Rsponse(JSON.stringify({ error: "Failed to create product" }), { status: 500 });
     }
   }
   

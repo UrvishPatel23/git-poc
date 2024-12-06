@@ -6,7 +6,7 @@ interface User {
     createdAt: string;
   }
   
-  let users: User[] = [
+  let users: Use[] = [
     { id: 1, name: "Alice", email: "alice@example.com", createdAt: "2024-01-10" },
     { id: 2, name: "Bob", email: "bob@example.com", createdAt: "2024-01-12" },
     { id: 3, name: "Charlie", email: "charlie@example.com", createdAt: "2024-02-01" },

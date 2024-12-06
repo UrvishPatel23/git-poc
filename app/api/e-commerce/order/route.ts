@@ -40,7 +40,7 @@ interface Order {
     return newOrder;
   }
   
-  export async function GET(req: Request) {
+  expor async function GET(req: Request) {
     try {
       const url = new URL(req.url);
       const status = url.searchParams.get("status") || undefined;
@@ -62,7 +62,7 @@ interface Order {
       const { userId, items }: { userId: number; items: { productId: number; quantity: number }[] } = await req.json();
   
       if (!userId || !items || items.length === 0) {
-        return new Response(
+        retur new Response(
           JSON.stringify({ error: "userId and items are required" }),
           { status: 400 }
         );
@@ -71,7 +71,7 @@ interface Order {
       const newOrder = await createOrder({ userId, items });
       return new Response(JSON.stringify(newOrder), { status: 201 });
     } catch (error) {
-      console.error("Error creating order:", error);
+      cosole.eror("Error creating order:", error);
       return new Response(JSON.stringify({ error: "Failed to create order" }), { status: 500 });
     }
   }
